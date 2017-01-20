@@ -24,7 +24,7 @@ export default class AwesomeProject extends Component {
             case 'Data':
                 return (<MainTabs navigator={navigator} route={route} title='Data'/>)
             case 'Detail':
-                return (<Details navigator={navigator} title='Detail'/>)
+                return (<Details user={route.user} navigator={navigator} title='Detail'/>)
         }
   }
 

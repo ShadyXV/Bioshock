@@ -17,56 +17,56 @@ const users = [
             "id": 1,
             "title": "accusamus beatae ",
             "url": "http://placehold.it/600/92c952",
-            "thumbnailUrl": "http://placehold.it/150/30ac17"
+            "details": "loremn Ipsum"
         },
         {
             "albumId": 1,
             "id": 2,
             "title": "reprehenderit m",
             "url": "http://placehold.it/600/771796",
-            "thumbnailUrl": "http://placehold.it/150/dff9f6"
+            "details": "loremn Ipsum"
         },
         {
             "albumId": 1,
             "id": 3,
             "title": "officia porro ",
             "url": "http://placehold.it/600/24f355",
-            "thumbnailUrl": "http://placehold.it/150/1941e9"
+            "details": "loremn Ipsum"
         },
         {
             "albumId": 1,
             "id": 4,
             "title": "culpa odie",
             "url": "http://placehold.it/600/d32776",
-            "thumbnailUrl": "http://placehold.it/150/39e985"
+            "details": "loremn Ipsum"
         },
         {
             "albumId": 1,
             "id": 5,
             "title": "natus nisi",
             "url": "http://placehold.it/600/f66b97",
-            "thumbnailUrl": "http://placehold.it/150/7735a"
+            "details": "loremn Ipsum"
         },
         {
             "albumId": 1,
             "id": 6,
             "title": "accusamus ea ",
             "url": "http://placehold.it/600/56a8c2",
-            "thumbnailUrl": "http://placehold.it/150/c672a0"
+            "details": "loremn Ipsum"
         },
         {
             "albumId": 1,
             "id": 7,
             "title": "officia delectus ",
             "url": "http://placehold.it/600/b0f7cc",
-            "thumbnailUrl": "http://placehold.it/150/4105a5"
+            "details":"loremn Ipsum"
         },
         {
             "albumId": 1,
             "id": 8,
             "title": "aut porro officiis",
             "url": "http://placehold.it/600/54176f",
-            "thumbnailUrl": "http://placehold.it/150/412ffd"
+            "details":"loremn Ipsum"
         }
 ]
 class Explore extends Component {
@@ -84,7 +84,8 @@ class Explore extends Component {
         return (
             <TouchableHighlight onPress={() => {
                  this.props.navigator.push({
-            id:'Detail'
+                     id:'Detail',
+                     user:user
         });
             }}>
             <View style={styles.row}>
@@ -94,6 +95,7 @@ class Explore extends Component {
                 <View style={styles.textBox}>
               
                   <Text style={styles.text} >{user.title}</Text>
+                  <Text style={styles.textDetails} >{user.details}</Text>
 
                 </View>
       
@@ -125,12 +127,20 @@ const  styles  = StyleSheet.create({
     },
     textBox:{
         position:'absolute',
-        bottom:60,
+        bottom:50,
         left:30,
         backgroundColor: '#F5FCFF',
+        padding:10,
+        width:200,
+        
     },
     text:{
-        fontSize:24
+        fontSize:16,
+        color:'#333'
+    },
+    textDetails:{
+        fontSize:11,
+        color:"#999"
     }
 })
 
