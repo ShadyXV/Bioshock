@@ -18,7 +18,7 @@ class MainTabs extends Component {
     constructor(props){
         super(props);
         this.state ={
-            
+
         }
     }
     render(){
@@ -46,7 +46,10 @@ class MainTabs extends Component {
 const styles = StyleSheet.create({
     container:{
             marginTop:0,
-    }
+    },
+    tabs: {
+    marginTop:60
+  },
 })
 
 
